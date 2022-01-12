@@ -1,13 +1,13 @@
 import axios from "axios";
 
-var baseUrl = "http://localhost:33371"
+var baseUrl = "http://localhost:43085"
 
 export default {
     async signIn(data){
         var response;
-
+        console.log(data)
         try{
-            response = await axios.post(`${baseUrl}/api/Login/authenticate`, data)
+            response = await axios.post(`${baseUrl}/api/Login/authenticateAdmin`, data)
         }
         catch(error){
             response = error.response
